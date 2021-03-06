@@ -33,3 +33,15 @@ requestForm.addEventListener("submit", (e) => {
       requestForm.querySelector(".error").textContent = error.message;
     });
 });
+
+// Notification
+const notification = document.querySelector(".notification");
+
+const showNotification = (message) => {
+  notification.textContent = message;
+  notification.classList.add("active");
+  setTimeout(() => {
+    notification.textContent = "";
+    notification.classList.remove("active");
+  }, 4000);
+};
